@@ -28,6 +28,9 @@ FString USSMLBlueprintFunctionLibrary::GetSSMLElementNodeOuterXml(const FSSMLEle
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
+	if(SSMLElementNode.ElementType == ESSMLElementType::PlainText)
+		return SSMLElementNode.InnerXml;
+	
 	FString Result="<";
 	bool bClosedTag;
 	switch (SSMLElementNode.ElementType)
@@ -379,6 +382,15 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::MakeBookmarkElementNode(const FS
 	BookmarkElementNode.ElementType = ESSMLElementType::Bookmark;
 	BookmarkElementNode.Properties.Add("mark",Mark);
 	return BookmarkElementNode;
+}
+
+FSSMLElementNode USSMLBlueprintFunctionLibrary::MakePlainTextElementNode(const FString Content)
+{
+	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
+	FSSMLElementNode PlainTextElementNode;
+	PlainTextElementNode.ElementType = ESSMLElementType::PlainText;
+	PlainTextElementNode.InnerXml = Content;
+	return PlainTextElementNode;
 }
 
 

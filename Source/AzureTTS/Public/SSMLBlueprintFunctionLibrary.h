@@ -199,4 +199,13 @@ public:
 	 */
 	UFUNCTION(BlueprintPure,Category="AzureTTS")
 	static FSSMLElementNode MakeBookmarkElementNode(const FString Mark);
+
+
+	/**
+	 * @brief Make a "plain text" node. Yep, consider text as a node.
+	 * @param Content content.
+	 * @return "plain text" node.
+	 */
+	UFUNCTION(BlueprintPure,Category="AzureTTS")
+	static FSSMLElementNode MakePlainTextElementNode(const FString Content);
 };
