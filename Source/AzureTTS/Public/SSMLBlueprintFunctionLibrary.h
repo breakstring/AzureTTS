@@ -25,7 +25,7 @@ public:
 	 * @return Whole xml document of this SSML document
 	 */
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FString GetSSMLDocumentOuterXml(const FSSMLDocument SSMLDocument);
+	static FString GetSSMLDocumentOuterXml(const FSSMLDocument& SSMLDocument);
 	
 
 	
@@ -35,17 +35,17 @@ public:
 	 * @return Element node outer xml
 	 */
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FString GetSSMLElementNodeOuterXml(const FSSMLElementNode SSMLElementNode);
+	static FString GetSSMLElementNodeOuterXml(const FSSMLElementNode& SSMLElementNode);
 
 
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FSSMLElementNode AppendChildElementNode(UPARAM(ref) FSSMLElementNode& ParentNode, const FSSMLElementNode ChildNode);
+	static FSSMLElementNode& AppendChildElementNode(UPARAM(ref) FSSMLElementNode& ParentNode, const FSSMLElementNode& ChildNode);
 
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FSSMLElementNode AppendChildElement(UPARAM(ref) FSSMLElementNode& ParentNode,const FString Content);
+	static FSSMLElementNode& AppendChildElement(UPARAM(ref) FSSMLElementNode& ParentNode,const FString Content);
 
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FSSMLElementNode AppendChildElementNodes(UPARAM(ref) FSSMLElementNode& ParentNode, const TArray<FSSMLElementNode> ChildElementNodes);
+	static FSSMLElementNode& AppendChildElementNodes(UPARAM(ref) FSSMLElementNode& ParentNode, const TArray<FSSMLElementNode>& ChildElementNodes);
 
 
 	/**

@@ -7,7 +7,7 @@
 #include "AzureTTSLogMacroDefine.h"
 
 
-FString USSMLBlueprintFunctionLibrary::GetSSMLDocumentOuterXml(const FSSMLDocument SSMLDocument)
+FString USSMLBlueprintFunctionLibrary::GetSSMLDocumentOuterXml(const FSSMLDocument& SSMLDocument)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
@@ -24,7 +24,7 @@ FString USSMLBlueprintFunctionLibrary::GetSSMLDocumentOuterXml(const FSSMLDocume
 
 
 
-FString USSMLBlueprintFunctionLibrary::GetSSMLElementNodeOuterXml(const FSSMLElementNode SSMLElementNode)
+FString USSMLBlueprintFunctionLibrary::GetSSMLElementNodeOuterXml(const FSSMLElementNode& SSMLElementNode)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
@@ -87,15 +87,15 @@ FString USSMLBlueprintFunctionLibrary::GetSSMLElementNodeOuterXml(const FSSMLEle
 	return Result;
 }
 
-FSSMLElementNode USSMLBlueprintFunctionLibrary::AppendChildElementNode(UPARAM(ref) FSSMLElementNode& ParentNode,
-	const FSSMLElementNode ChildNode)
+FSSMLElementNode& USSMLBlueprintFunctionLibrary::AppendChildElementNode(UPARAM(ref) FSSMLElementNode& ParentNode,
+	const FSSMLElementNode& ChildNode)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
 	return AppendChildElement(ParentNode,GetSSMLElementNodeOuterXml(ChildNode));
 }
 
-FSSMLElementNode USSMLBlueprintFunctionLibrary::AppendChildElement(UPARAM(ref) FSSMLElementNode& ParentNode, const FString Content)
+FSSMLElementNode& USSMLBlueprintFunctionLibrary::AppendChildElement(UPARAM(ref) FSSMLElementNode& ParentNode, const FString Content)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
@@ -103,8 +103,8 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::AppendChildElement(UPARAM(ref) F
 	return ParentNode;
 }
 
-FSSMLElementNode USSMLBlueprintFunctionLibrary::AppendChildElementNodes(UPARAM(ref) FSSMLElementNode& ParentNode,
-	const TArray<FSSMLElementNode> ChildElementNodes)
+FSSMLElementNode& USSMLBlueprintFunctionLibrary::AppendChildElementNodes(UPARAM(ref) FSSMLElementNode& ParentNode,
+	const TArray<FSSMLElementNode>& ChildElementNodes)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
