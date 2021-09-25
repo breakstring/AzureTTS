@@ -33,7 +33,7 @@ void UAsyncTaskGetAzureVoiceList::Start(const EAzureAuthenticationMethod Authent
 	HttpRequest->OnProcessRequestComplete().BindUObject(this, &UAsyncTaskGetAzureVoiceList::HandleRequest);
 	HttpRequest->SetURL(Endpoint);
 	HttpRequest->SetVerb(TEXT("GET"));
-	if (AuthenticationMethod == EAzureAuthenticationMethod::SUBSCRIPTION_KEY)
+	if (AuthenticationMethod == EAzureAuthenticationMethod::Subscription_Key)
 	{
 		HttpRequest->SetHeader(TEXT("Ocp-Apim-Subscription-Key"), AuthenticationValue);
 	}
