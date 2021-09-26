@@ -29,7 +29,7 @@ Azure subscription can be also free if you use the Free layer services. More det
 
 ### Send the text as SSML struct to azure to get the voice data.
 <img src="Resources/tts.png" width="800" />
-This plugin just get the *raw data* of the audio, you can process the raw data as your wish. e.g. save to local or play it.
+This plugin just get the **raw data** of the audio, you can process the raw data as your wish. e.g. save to local or play it.
 The following just show how to use other plugin "RuntimeAudioImpoter" to play it.
 <img src="Resources/play.png" width="800" />
 
@@ -43,3 +43,8 @@ There are some examples show how to use the blueprint to build your SSML.
 <img src="Resources/demo4.png" width="800" />
 <img src="Resources/demo5.png" width="800" />
 <img src="Resources/demo6.png" width="800" />
+
+
+## FQA
+- **Compatibility?** Sorry, I just tested it in UE 4.27.
+- **TTS 400 error** SSML struct error, or some tag not compatible with your selected voice.
