@@ -54,10 +54,11 @@ public:
 	 * @param XmlLang Specifies the language of the root document. The value can contain a lowercase, two-letter language code (for example, en), or the language code and uppercase country/region (for example, en-US).
 	 * @param Version "version" attribute, Indicates the version of the SSML specification used to interpret the document markup. The current version is 1.0.
 	 * @param XmlNs "xmlns" attribute, Specifies the URI to the document that defines the markup vocabulary (the element types and attribute names) of the SSML document. The current URI is http://www.w3.org/2001/10/synthesis.
+	 * @param XmlNsMSTTS "xmlns:mstts" attribute.
 	 * @return "speak" node
 	 */
 	UFUNCTION(BlueprintPure, Category="AzureTTS")
-	static FSSMLElementNode MakeSpeakElementNode(const FString InnerXml, const FString XmlLang,  const FString Version="1.0", const FString XmlNs="http://www.w3.org/2001/10/synthesis");
+	static FSSMLElementNode MakeSpeakElementNode(const FString InnerXml,UPARAM(DisplayName = "xml:lang") const FString XmlLang, UPARAM(DisplayName = "version") const FString Version="1.0",UPARAM(DisplayName = "xmlns") const FString XmlNs="http://www.w3.org/2001/10/synthesis",UPARAM(DisplayName = "xmlns:mstts")const FString XmlNsMSTTS = "https://www.w3.org/2001/mstts");
 	
 	/**
 	 * @brief Make a "voice“ node

@@ -116,7 +116,7 @@ FSSMLElementNode& USSMLBlueprintFunctionLibrary::AppendChildElementNodes(UPARAM(
 }
 
 FSSMLElementNode USSMLBlueprintFunctionLibrary::MakeSpeakElementNode(const FString InnerXml,
-	const FString XmlLang,  const FString Version, const FString XmlNs)
+	const FString XmlLang,  const FString Version, const FString XmlNs, const FString XmlNsMSTTS)
 {
 	UE_LOG(AzureTTS,Log,TEXT(__FUNCTION__));
 
@@ -132,6 +132,9 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::MakeSpeakElementNode(const FStri
 
 	if(!XmlLang.IsEmpty())
 		SpeakElementNode.Properties.Add("xml:lang",XmlLang);
+
+	if(!XmlNsMSTTS.IsEmpty())
+		SpeakElementNode.Properties.Add("xmlns:mstts",XmlNsMSTTS);
 
 	return SpeakElementNode;
 }
