@@ -79,7 +79,7 @@ enum class ESSMLElementType : uint8
 	Emphasis UMETA(DisplayName = "emphasis"),
 	Mark UMETA(DisplayName = "mark"),
 	Desc UMETA(DisplayName = "desc"),
-	MSTTS_Express_As UMETA(DisplayName = "mstts:expresss-as"),
+	MSTTS_Express_As UMETA(DisplayName = "mstts:express-as"),
 	MSTTS_Silence UMETA(DisplayName = "mstts:silence"),
 	MSTTS_BackgroundAudio UMETA(DisplayName = "mstts:backgroundaudio"),
 	PlainText UMETA(DisplayName="plain text",ToolTip="Not official SSML element")
