@@ -46,5 +46,5 @@ There are some examples show how to use the blueprint to build your SSML.
 
 
 ## FQA
-- **Compatibility?** Sorry, I just tested it in UE 4.27.
-- **TTS 400 error** SSML struct error, or some tag not compatible with your selected voice.
+- **Compatibility?:** Sorry, I just tested it in UE 4.27.
+- **TTS 400 error:** SSML struct error, or some tag not compatible with your selected voice.
