@@ -6,6 +6,7 @@
 #include "Interfaces/IHttpRequest.h"
 #include "Interfaces/IHttpResponse.h"
 #include "JsonObjectConverter.h"
+// ReSharper disable once CppUnusedIncludeDirective
 #include "AzureTTSLogMacroDefine.h"
 
 UAsyncTaskGetAzureVoiceList::UAsyncTaskGetAzureVoiceList(const FObjectInitializer& ObjectInitializer)
