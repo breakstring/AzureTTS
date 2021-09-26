@@ -52,7 +52,7 @@ FString USSMLBlueprintFunctionLibrary::GetSSMLElementNodeOuterXml(const FSSMLEle
 		bClosedTag = true;
 	
 	/** Get Enum **/
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("ESSMLElementType"), true);
+	const UEnum* EnumPtr = FindObject<UEnum>((UObject*)ANY_PACKAGE, TEXT("ESSMLElementType"), true);
 	
 	/** Get element node tag **/
 	FString XmlTag = (EnumPtr->GetDisplayNameTextByValue(static_cast<int64>(SSMLElementNode.ElementType))).ToString().ToLower();
@@ -233,7 +233,7 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::MakeMSTTSSilenceElementNode(cons
 	MSTTSSilenceElementNode.ElementType=ESSMLElementType::MSTTS_Silence;
 
 	/** Get Enum **/
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("ESSMLSilenceType"), true);
+	const UEnum* EnumPtr = FindObject<UEnum>((UObject*)ANY_PACKAGE, TEXT("ESSMLSilenceType"), true);
 	FString Type = (EnumPtr->GetDisplayNameTextByValue(static_cast<int64>(SilenceType))).ToString().ToLower();
 	MSTTSSilenceElementNode.Properties.Add("type",Type);
 	MSTTSSilenceElementNode.Properties.Add("value",Value);
@@ -271,7 +271,7 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::MakePhonemeElementNode(const FSt
 	FSSMLElementNode PhonemeElementNode;
 	PhonemeElementNode.ElementType=ESSMLElementType::Phoneme;
 	PhonemeElementNode.InnerXml = InnerXml;
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("ESSMLPhonemeAlphabetType"), true);
+	const UEnum* EnumPtr = FindObject<UEnum>((UObject*)ANY_PACKAGE, TEXT("ESSMLPhonemeAlphabetType"), true);
 	const FString Alphabet = (EnumPtr->GetDisplayNameTextByValue(static_cast<int64>(PhonemeAlphabetType))).ToString().ToLower();
 	PhonemeElementNode.Properties.Add("alphabet",Alphabet);
 	PhonemeElementNode.Properties.Add("ph",Ph);
@@ -328,7 +328,7 @@ FSSMLElementNode USSMLBlueprintFunctionLibrary::MakeSayAsElementNode(const FStri
 	FSSMLElementNode SayAsElementNode;
 	SayAsElementNode.ElementType = ESSMLElementType::Say_As;
 	SayAsElementNode.InnerXml = InnerXml;
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("ESSMLInterpretAsType"), true);
+	const UEnum* EnumPtr = FindObject<UEnum>((UObject*)ANY_PACKAGE, TEXT("ESSMLInterpretAsType"), true);
 	const FString InterpretAsValue = (EnumPtr->GetDisplayNameTextByValue(static_cast<int64>(InterpretAs))).ToString().ToLower();
 	SayAsElementNode.Properties.Add("interpret-as",InterpretAsValue);
 	if(!Format.IsEmpty())

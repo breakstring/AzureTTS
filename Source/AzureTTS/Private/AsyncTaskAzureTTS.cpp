@@ -36,7 +36,7 @@ void UAsyncTaskAzureTTS::Start(const EAzureAuthenticationMethod AuthenticationMe
 	HttpRequest->SetURL(Endpoint);
 	HttpRequest->SetVerb(TEXT("POST"));
 	
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("EAzureSpeechAudioOutputFormat"), true);
+	const UEnum* EnumPtr = FindObject<UEnum>((UObject*)ANY_PACKAGE, TEXT("EAzureSpeechAudioOutputFormat"));
 	const FString AudioFormatValue = (EnumPtr->GetDisplayNameTextByValue(static_cast<int64>(AudioFormat))).ToString().ToLower();
 	
 	HttpRequest->SetHeader(TEXT("X-Microsoft-OutputFormat"), AudioFormatValue);
