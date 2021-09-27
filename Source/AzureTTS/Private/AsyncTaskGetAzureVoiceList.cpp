@@ -1,5 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Author: Kenn Zhang
+// Date: 2021-09-27
+// Repo: https://github.com/breakstring/AzureTTS
 
 #include "AsyncTaskGetAzureVoiceList.h"
 #include "HttpModule.h"

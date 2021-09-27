@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 // @reference W3C, Speech Synthesis Markup Language (SSML) Version 1.0. https://www.w3.org/TR/2004/REC-speech-synthesis-20040907/#edef_voice
 // @reference AzureTTS, Improve synthesis with Speech Synthesis Markup Language (SSML). https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup
-
+// Author: Kenn Zhang
+// Date: 2021-09-27
+// Repo: https://github.com/breakstring/AzureTTS
 
 #pragma once
 

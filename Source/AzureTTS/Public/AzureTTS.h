@@ -1,4 +1,6 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Author: Kenn Zhang
+// Date: 2021-09-27
+// Repo: https://github.com/breakstring/AzureTTS
 
 #pragma once
 
