@@ -1,5 +1,5 @@
 ﻿# Unreal Engine Azure TTS(Text-To-Speech) plugin
-
+[简体中文](Readme.CN.md)
 ## Why Azure TTS
 Build apps and games that speak naturally, choosing from more than 250 voices and over 70 languages and variants. 
 Differentiate your brand with a customized voice, and access voices with different speaking styles and emotional tones to fit your use case.
@@ -45,6 +45,6 @@ There are some examples show how to use the blueprint to build your SSML.
 <img src="Resources/demo6.png" width="800" />
 
 
-## FQA
-- **Compatibility?:** Sorry, I just tested it in UE 4.27.
+## FAQ
+- **Compatibility?:** Sorry, I developed this plugin in UE 4.27. Maybe you need some change if using different engine version.
 - **TTS 400 error:** SSML struct error, or some tag not compatible with your selected voice.
