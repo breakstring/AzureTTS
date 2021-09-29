@@ -40,7 +40,7 @@ class AZURETTS_API UAsyncTaskAzureTTS : public UBlueprintAsyncActionBase
 	* @param AudioFormat - Audio format
 	* @return UAsyncTaskAzureTTS*
 	*/
-	UFUNCTION(BlueprintCallable, BlueprintInternalUseOnly, Category = "AzureTTS", meta = (DisplayName = "Text To Speach - Raw Data (Async)"))
+	UFUNCTION(BlueprintCallable, BlueprintInternalUseOnly, Category = "AzureTTS", meta = (DisplayName = "Text To Speech - Raw Data (Async)"))
 	static UAsyncTaskAzureTTS* TTS(const EAzureAuthenticationMethod AuthenticationMethod, const FString AuthenticationValue,
 		const FString Endpoint, const FString SSML, const EAzureSpeechAudioOutputFormat AudioFormat);
 
