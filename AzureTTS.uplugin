@@ -4,7 +4,6 @@
 	"VersionName": "1.0",
 	"FriendlyName": "AzureTTS",
 	"EngineVersion": "4.27.0",
-	"WhitelistPlatforms":["Win64"],
 	"Description": "Azure TTS(Text-to-Speech) plugin",
 	"Category": "AI",
 	"CreatedBy": "Kenn Zhang",
@@ -20,7 +19,8 @@
 		{
 			"Name": "AzureTTS",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": ["Win64"]
 		}
 	]
 }
