@@ -95,13 +95,13 @@ struct FSSMLElementNode
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category="Data")
 	ESSMLElementType ElementType;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category="Data")
 	TMap<FString, FString> Properties;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category="Data")
 	FString InnerXml;
 	
 };
@@ -115,13 +115,13 @@ struct FSSMLDocument
 {
 	GENERATED_BODY()
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category="Data")
 	FString XmlVersion = "1.0";
 
 	/**
 	 * @brief Root Element must be "speak"
 	 */
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, Category="Data")
 	/** Root Element must be "speak" **/
 	FSSMLElementNode RootElement ;
 	
